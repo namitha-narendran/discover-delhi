@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Delhi: monuments, food, culture, markets, itinerary, and practical travel tips.">
+  <title>Discover Delhi</title>
+  <link rel="icon" type="image/svg+xml" href="assets/delhi-icon.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { font-family: Poppins, sans-serif; }
+    h1, h2, h3, h4 { font-family: "Playfair Display", serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-bg {
+      background:
+        radial-gradient(circle at 20% 30%, rgba(251, 146, 60, 0.2), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(239, 68, 68, 0.18), transparent 30%),
+        linear-gradient(120deg, #fff7ed, #ffffff 45%, #fef2f2);
+    }
+    .card { transition: transform 200ms ease, box-shadow 200ms ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12); }
+    .nav-link.active { border-bottom: 2px solid #f97316; }
+    .food-photo {
+      filter: saturate(1.22) contrast(1.06) brightness(1.02);
+      transition: transform 300ms ease, filter 300ms ease;
+    }
+    .card:hover .food-photo {
+      transform: scale(1.04);
+      filter: saturate(1.3) contrast(1.1) brightness(1.03);
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 560ms ease, transform 560ms ease;
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .contact-panel {
+      transition: transform 260ms ease, box-shadow 260ms ease;
+    }
+    .contact-panel:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+    }
+    .contact-social {
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+    .contact-social:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll,
+      .contact-panel,
+      .contact-social {
+        transition: none;
+        transform: none;
+      }
+      .reveal-on-scroll { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="h-full bg-orange-50 text-gray-800">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="inline-flex items-center gap-2.5 font-semibold text-3xl leading-none tracking-tight"><img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-8 h-8" loading="eager" decoding="async"><span><span class="text-orange-500">Discover</span> <span class="text-orange-500">Delhi</span></span></a>
+      <button id="menuBtn" class="lg:hidden px-3 py-2 rounded-md border border-gray-200" aria-label="Open menu">Menu</button>
+      <div id="desktopNav" class="hidden lg:flex items-center gap-5 text-sm font-medium">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#places">Places</a>
+        <a class="nav-link" href="#food">Food</a>
+        <a class="nav-link" href="#itinerary">Itinerary</a>
+        <a class="nav-link" href="#shopping">Shopping</a>
+        <a class="nav-link" href="#culture">Culture</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#tips">Tips</a>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-orange-500 text-white hover:bg-orange-600">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+        <a href="#home">Home</a><a href="#places">Places</a><a href="#food">Food</a><a href="#itinerary">Itinerary</a>
+        <a href="#shopping">Shopping</a><a href="#culture">Culture</a><a href="#gallery">Gallery</a><a href="#tips">Tips</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section id="home" class="hero-bg min-h-[85vh] flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium"><span class="text-[10px] uppercase tracking-[0.26em] font-bold text-[#d4652d] relative -top-[1px]">IN</span><span class="font-semibold">Capital City of India</span></p>
+          <h1 class="text-6xl sm:text-7xl font-bold mt-5 leading-[0.95] text-slate-900">Discover <span class="block text-orange-500">Delhi</span></h1>
+          <p class="mt-7 max-w-2xl text-xl sm:text-2xl leading-relaxed text-slate-600">Explore the magnificent capital of India &#8212; where ancient history meets modern vibrancy. From majestic monuments to bustling bazaars, savory street food to colorful festivals, Delhi offers an unforgettable journey through India's heart and soul.</p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#places" class="px-8 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold shadow-lg shadow-orange-300/40">Explore Now &#8594;</a>
+            <a href="#itinerary" class="px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow">Plan Your Trip</a>
+          </div>
+        </div>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C%20India%2C%20India%20Gate.jpg" alt="India Gate in New Delhi" class="w-full h-[420px] object-cover rounded-3xl shadow-2xl" loading="eager" fetchpriority="high">
+      </div>
+    </section>
+    <section id="city-stats" class="py-14 bg-gradient-to-r from-[#f8f4f2] via-[#f2f0ef] to-[#f8eef0]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-[30px] bg-white/35 backdrop-blur-sm p-4 sm:p-6 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            <article class="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] px-6 py-7 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div class="text-[34px] leading-none">&#127963;&#65039;</div>
+              <p class="mt-4 text-[42px] sm:text-[46px] font-semibold text-[#f05a28] leading-none">174</p>
+              <p class="mt-3 text-[30px] font-medium text-slate-500 leading-none">Monuments</p>
+            </article>
+            <article class="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] px-6 py-7 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div class="text-[34px] leading-none">&#128725;</div>
+              <p class="mt-4 text-[42px] sm:text-[46px] font-semibold text-[#f05a28] leading-none">3</p>
+              <p class="mt-3 text-[30px] font-medium text-slate-500 leading-none">UNESCO Sites</p>
+            </article>
+            <article class="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] px-6 py-7 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div class="text-[34px] leading-none">&#128647;</div>
+              <p class="mt-4 text-[42px] sm:text-[46px] font-semibold text-[#f05a28] leading-none">286</p>
+              <p class="mt-3 text-[30px] font-medium text-slate-500 leading-none">Metro Stations</p>
+            </article>
+            <article class="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] px-6 py-7 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div class="text-[34px] leading-none">&#127917;</div>
+              <p class="mt-4 text-[42px] sm:text-[46px] font-semibold text-[#f05a28] leading-none">50+</p>
+              <p class="mt-3 text-[30px] font-medium text-slate-500 leading-none">Annual Festivals</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="places" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-100 text-orange-600 text-sm font-medium">
+            <span>🏛️</span>
+            <span>Must Visit Attractions</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900 mt-5">Famous <span class="text-orange-500">Places</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">Discover Delhi's iconic landmarks that narrate stories of emperors, freedom fighters, and architectural marvels spanning centuries.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20Delhi.jpg" alt="Red Fort in Old Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Red Fort (Lal Qila)</h3>
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">Built in 1639 by Mughal Emperor Shah Jahan, this massive red sandstone fort served as the main residence of the emperors for nearly 200 years. Every Independence Day, India's Prime Minister hoists the national flag here.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Old Delhi &nbsp;&nbsp;&nbsp; &#9200; 9:30 AM - 4:30 PM</p>
+            </div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Qutub_Minar_%28Delhi%29.jpg" alt="Qutub Minar full tower view in Mehrauli" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Qutub Minar</h3>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">Standing at 73 meters, this magnificent minaret is the world's tallest brick tower. Built in 1193 by Qutub-ud-din Aibak, its five distinct storeys feature intricate carvings and verses from the Quran.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Mehrauli &nbsp;&nbsp;&nbsp; &#9200; Sunrise - Sunset</p>
+            </div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20Temple%2CNew%20Delhi.jpg" alt="Lotus Temple in New Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Lotus Temple</h3>
+                <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-semibold">Modern Marvel</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This stunning Bah�'� House of Worship resembles a lotus flower with 27 free-standing marble petals. Completed in 1986, it welcomes people of all faiths for meditation and prayer in serene silence.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Nehru Place &nbsp;&nbsp;&nbsp; &#9200; 9:00 AM - 5:30 PM</p>
+            </div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Humayun%27s%20Tomb-Delhi.jpg" alt="Humayun's Tomb in Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Humayun's Tomb</h3>
+                <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">The inspiration for the Taj Mahal, this stunning garden tomb was built in 1570 for Mughal Emperor Humayun. It introduced the Persian char-bagh (four-quartered garden) style to India's architectural landscape.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Nizamuddin East &nbsp;&nbsp;&nbsp; &#9200; Sunrise - Sunset</p>
+            </div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C%20India%2C%20India%20Gate.jpg" alt="India Gate war memorial" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">India Gate</h3>
+                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">War Memorial</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This 42-meter high arch commemorates 70,000 Indian soldiers who died in World War I. The Amar Jawan Jyoti (eternal flame) burns beneath it, honoring India's unknown soldiers. Perfect for evening visits!</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Rajpath &nbsp;&nbsp;&nbsp; &#9200; 24 Hours</p>
+            </div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swaminarayan%20Akshardham.jpg" alt="Swaminarayan Akshardham Temple in Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Akshardham Temple</h3>
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">Spiritual</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This architectural masterpiece features 20,000 hand-carved statues and intricate stone carvings. The complex includes beautiful gardens, a musical fountain show, and exhibitions on Indian culture and spirituality.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Noida Border &nbsp;&nbsp;&nbsp; &#9200; 9:30 AM - 6:30 PM</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="food" class="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-100 text-red-600 text-sm font-medium">
+            <span>🍲</span>
+            <span>Culinary Paradise</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900 mt-5">Delhi <span class="text-orange-500">Food</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">From the legendary lanes of Chandni Chowk to modern food streets, Delhi's food scene is a gastronomic adventure that tantalizes every taste bud.</p>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-[#f7f7f8] shadow-[0_10px_24px_rgba(15,23,42,0.08)] mb-10">
+          <div class="grid lg:grid-cols-2">
+            <div class="p-8 lg:p-10">
+              <div class="text-6xl">🏪</div>
+              <h3 class="text-4xl sm:text-5xl text-slate-900 mt-4">Chandni Chowk - The Food Capital</h3>
+              <p class="mt-4 text-lg text-slate-600 leading-relaxed">Established in the 17th century by Mughal Emperor Shah Jahan, Chandni Chowk is Asia's largest wholesale market and Delhi's ultimate street food destination. Narrow lanes filled with centuries-old shops serve legendary dishes that have been perfected over generations.</p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium">📍 Old Delhi</span>
+                <span class="px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium">💰 Budget Friendly</span>
+                <span class="px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">🚇 Metro Connected</span>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-orange-200 to-red-200 p-8 lg:p-10 flex items-center justify-center">
+              <div class="grid grid-cols-2 gap-4 max-w-sm w-full">
+                <div class="bg-white/80 backdrop-blur rounded-2xl p-4 text-center">
+                  <div class="text-3xl">🕐</div>
+                  <p class="mt-2 font-semibold text-slate-800">400+ Years Old</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur rounded-2xl p-4 text-center">
+                  <div class="text-3xl">🍽️</div>
+                  <p class="mt-2 font-semibold text-slate-800">1000+ Food Stalls</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur rounded-2xl p-4 text-center">
+                  <div class="text-3xl">👨‍🍳</div>
+                  <p class="mt-2 font-semibold text-slate-800">Heritage Recipes</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur rounded-2xl p-4 text-center">
+                  <div class="text-3xl">⭐</div>
+                  <p class="mt-2 font-semibold text-slate-800">Must Visit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chole%20Bhature.jpg" alt="Chole Bhature dish" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Chole Bhature</h3><p class="text-sm text-gray-600 mt-2">Deep-fried bread with chickpea curry.</p><p class="mt-3 text-orange-600 font-medium text-sm">🔥 Best at: Sita Ram Diwan Chand</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.pexels.com/photos/34270742/pexels-photo-34270742.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Papri chaat street food" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Chaat</h3><p class="text-sm text-gray-600 mt-2">Tangy, sweet, and spicy Delhi-style snack.</p><p class="mt-3 text-orange-600 font-medium text-sm">🔥 Best at: Haldiram's, Bikanervala</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.pexels.com/photos/13063313/pexels-photo-13063313.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Golgappa or pani puri" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Golgappa</h3><p class="text-sm text-gray-600 mt-2">Crispy puris with spiced water and fillings.</p><p class="mt-3 text-orange-600 font-medium text-sm">🔥 Best at: Any street corner!</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aloo%20Paratha.jpg" alt="Aloo paratha with curd" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Paratha</h3><p class="text-sm text-gray-600 mt-2">Stuffed flatbread, a classic from old Delhi lanes.</p><p class="mt-3 text-orange-600 font-medium text-sm">🔥 Best at: Paranthe Wali Gali</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://unsplash.com/photos/zRZxs9tDha0/download?force=true&w=900" alt="Butter Chicken curry" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Butter Chicken</h3><p class="text-sm text-gray-600 mt-2">Invented in Delhi at Moti Mahal.</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://unsplash.com/photos/kujzmLAVKoM/download?force=true&w=900" alt="Nihari slow-cooked stew" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Nihari</h3><p class="text-sm text-gray-600 mt-2">Slow-cooked Mughlai delicacy.</p></div>
+          </article>
+          <article class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://unsplash.com/photos/2q9Ml8q-1bk/download?force=true&w=900" alt="Kulfi Falooda dessert" class="food-photo w-full h-48 object-cover" loading="lazy" decoding="async">
+            <div class="p-4"><h3 class="font-bold">Kulfi Falooda</h3><p class="text-sm text-gray-600 mt-2">Traditional Indian ice cream dessert.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary" class="py-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+            <span>📅</span>
+            <span>Plan Your Trip</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900 mt-5">2-Day <span class="text-orange-500">Itinerary</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">Make the most of your Delhi visit with our carefully curated two-day travel plan covering the best attractions, food spots, and experiences.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <article class="bg-[#f4efdf] rounded-3xl p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 text-white flex items-center justify-center text-4xl font-bold shadow-md">D1</div>
+              <div>
+                <h3 class="text-4xl text-slate-900">Day One</h3>
+                <p class="text-xl text-slate-600">New Delhi & Central Delhi</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-xl">🌅</div>
+                  <div><p class="text-orange-600 font-semibold">8:00 AM - 10:00 AM</p><h4 class="text-2xl text-slate-900">India Gate & Rajpath</h4><p class="text-slate-600 text-lg">Start with a morning walk at India Gate. Watch the stunning sunrise and explore the beautiful lawns.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center text-xl">🏛️</div>
+                  <div><p class="text-orange-600 font-semibold">10:30 AM - 12:00 PM</p><h4 class="text-2xl text-slate-900">Rashtrapati Bhavan</h4><p class="text-slate-600 text-lg">Visit the President's official residence. The Mughal Gardens are open Feb-March.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-xl">🍽️</div>
+                  <div><p class="text-orange-600 font-semibold">12:30 PM - 2:00 PM</p><h4 class="text-2xl text-slate-900">Lunch at Connaught Place</h4><p class="text-slate-600 text-lg">Explore CP's iconic colonial architecture. Try Wenger's bakery or Saravana Bhavan.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-xl">🏺</div>
+                  <div><p class="text-orange-600 font-semibold">3:00 PM - 5:30 PM</p><h4 class="text-2xl text-slate-900">National Museum</h4><p class="text-slate-600 text-lg">Explore 5,000 years of Indian art, culture, and history through stunning artifacts.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-xl">🌙</div>
+                  <div><p class="text-orange-600 font-semibold">6:00 PM - 9:00 PM</p><h4 class="text-2xl text-slate-900">Evening at India Gate</h4><p class="text-slate-600 text-lg">Return for the magical evening view. Enjoy street food and ice cream as the monument lights up.</p></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-[#f3e8e2] rounded-3xl p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 text-white flex items-center justify-center text-4xl font-bold shadow-md">D2</div>
+              <div>
+                <h3 class="text-4xl text-slate-900">Day Two</h3>
+                <p class="text-xl text-slate-600">Old Delhi & Heritage Sites</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-xl">🏰</div>
+                  <div><p class="text-red-500 font-semibold">9:00 AM - 11:30 AM</p><h4 class="text-2xl text-slate-900">Red Fort</h4><p class="text-slate-600 text-lg">Explore the magnificent Mughal fort. Don't miss Diwan-i-Aam, Diwan-i-Khas, and the museum.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-xl">🍜</div>
+                  <div><p class="text-red-500 font-semibold">12:00 PM - 2:30 PM</p><h4 class="text-2xl text-slate-900">Chandni Chowk Food Walk</h4><p class="text-slate-600 text-lg">The ultimate street food adventure! Try paranthas, jalebis, lassi, and more in historic lanes.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-xl">🕌</div>
+                  <div><p class="text-red-500 font-semibold">3:00 PM - 4:00 PM</p><h4 class="text-2xl text-slate-900">Jama Masjid</h4><p class="text-slate-600 text-lg">Visit India's largest mosque. Climb the minaret for panoramic Old Delhi views.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-xl">🪷</div>
+                  <div><p class="text-red-500 font-semibold">4:30 PM - 6:00 PM</p><h4 class="text-2xl text-slate-900">Lotus Temple</h4><p class="text-slate-600 text-lg">End with the serene Bahá'í temple. Experience peaceful meditation as the sun sets.</p></div>
+                </div>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-xl">🛍️</div>
+                  <div><p class="text-red-500 font-semibold">7:00 PM - 9:00 PM</p><h4 class="text-2xl text-slate-900">Shopping & Dinner</h4><p class="text-slate-600 text-lg">Visit Dilli Haat for handicrafts and enjoy dinner at a traditional restaurant.</p></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Pro Tips for Your Trip" class="pb-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-[28px] bg-gradient-to-r from-[#ff6f0b] to-[#f43f5e] p-8 md:p-10 shadow-[0_10px_24px_rgba(15,23,42,0.1)]">
+          <h3 class="text-white text-4xl sm:text-5xl">💡 Pro Tips for Your Trip</h3>
+          <div class="mt-6 grid md:grid-cols-3 gap-4">
+            <article class="rounded-2xl bg-white/18 p-5 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/25">
+              <div class="text-3xl">🚇</div>
+              <p class="mt-3 text-2xl leading-relaxed">Use Delhi Metro - It connects all major attractions and is the fastest way to travel!</p>
+            </article>
+            <article class="rounded-2xl bg-white/18 p-5 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/25">
+              <div class="text-3xl">👟</div>
+              <p class="mt-3 text-2xl leading-relaxed">Wear comfortable walking shoes - You'll be doing lots of exploring!</p>
+            </article>
+            <article class="rounded-2xl bg-white/18 p-5 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/25">
+              <div class="text-3xl">📱</div>
+              <p class="mt-3 text-2xl leading-relaxed">Download Google Maps offline - Helps navigate Old Delhi's narrow lanes!</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shopping" class="py-20 bg-[#efeaf6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#e7ddff] text-[#7b3fe4] text-sm font-medium">
+            <span>🛍️</span>
+            <span>Shopper's Paradise</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900 mt-5">Shopping in <span class="text-orange-500">Delhi</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">From traditional bazaars to modern malls, Delhi offers incredible shopping experiences for every budget and taste.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#f4e2d6] p-6 text-center">
+              <div class="text-5xl">🏪</div>
+              <h3 class="text-5xl sm:text-6xl text-red-700 mt-3">Chandni Chowk</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Chandni Chowk</h4><span class="text-2xl">🌟</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">Asia's oldest and busiest market! Navigate through narrow lanes filled with fabric, jewelry, electronics, spices, and wedding shopping. Each lane specializes in something unique.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700">Fabric</span>
+                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700">Jewelry</span>
+                <span class="px-3 py-1 rounded-full bg-green-100 text-green-700">Spices</span>
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700">Wedding</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Bargain hard - prices can drop 50%!</p>
+            </div>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#eadff0] p-6 text-center">
+              <div class="text-5xl">👗</div>
+              <h3 class="text-5xl sm:text-6xl text-fuchsia-700 mt-3">Sarojini Nagar</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Sarojini Nagar Market</h4><span class="text-2xl">💃</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">The ultimate fashion paradise! Export surplus and branded clothes at unbelievable prices. Perfect for trendy western wear, accessories, and budget fashion finds.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700">Fashion</span>
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700">Accessories</span>
+                <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Bags</span>
+                <span class="px-3 py-1 rounded-full bg-teal-100 text-teal-700">Shoes</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Visit on weekday mornings for best picks!</p>
+            </div>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#efe8b9] p-6 text-center">
+              <div class="text-5xl">🎨</div>
+              <h3 class="text-5xl sm:text-6xl text-amber-700 mt-3">Janpath</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Janpath Market</h4><span class="text-2xl">🎭</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">The tourist's favorite! Beautiful handicrafts, Tibetan jewelry, bohemian clothes, and souvenirs. Located near Connaught Place, it's perfect for gifts and keepsakes.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-700">Handicrafts</span>
+                <span class="px-3 py-1 rounded-full bg-cyan-100 text-cyan-700">Souvenirs</span>
+                <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-700">Tibetan</span>
+                <span class="px-3 py-1 rounded-full bg-lime-100 text-lime-700">Boho</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Great for unique souvenirs!</p>
+            </div>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#cfeee1] p-6 text-center">
+              <div class="text-5xl">🏺</div>
+              <h3 class="text-5xl sm:text-6xl text-teal-700 mt-3">Dilli Haat</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Dilli Haat</h4><span class="text-2xl">🎪</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">Open-air craft bazaar showcasing India's diverse handicrafts! Artisans from different states sell traditional items. Also features regional food stalls and cultural performances.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-green-100 text-green-700">Crafts</span>
+                <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700">Textiles</span>
+                <span class="px-3 py-1 rounded-full bg-violet-100 text-violet-700">Pottery</span>
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700">Food</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Entry fee ₹30 - totally worth it!</p>
+            </div>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#d9e5f9] p-6 text-center">
+              <div class="text-5xl">📚</div>
+              <h3 class="text-5xl sm:text-6xl text-indigo-700 mt-3">Khan Market</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Khan Market</h4><span class="text-2xl">✨</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">Delhi's upscale shopping destination! Boutique stores, bookshops, designer wear, and gourmet cafes. Popular among expats and the city's elite.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700">Designer</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700">Books</span>
+                <span class="px-3 py-1 rounded-full bg-fuchsia-100 text-fuchsia-700">Cafes</span>
+                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-700">Luxury</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Best for quality over bargains!</p>
+            </div>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl overflow-hidden shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="bg-[#eddcf1] p-6 text-center">
+              <div class="text-5xl">💄</div>
+              <h3 class="text-5xl sm:text-6xl text-purple-700 mt-3">Lajpat Nagar</h3>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center"><h4 class="text-4xl text-slate-900">Lajpat Nagar</h4><span class="text-2xl">🪄</span></div>
+              <p class="mt-3 text-slate-600 text-lg leading-relaxed">A favorite among locals for ethnic wear, home decor, and mehndi. The Central Market is bustling with affordable fashion, footwear, and accessories.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 rounded-full bg-fuchsia-100 text-fuchsia-700">Ethnic</span>
+                <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700">Mehndi</span>
+                <span class="px-3 py-1 rounded-full bg-teal-100 text-teal-700">Decor</span>
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700">Food</span>
+              </div>
+              <p class="mt-4 text-slate-500 text-lg">💡 Tip: Great for Indian ethnic wear!</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 bg-[#f7f7f8] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+          <h3 class="text-4xl text-slate-900 text-center">What to Buy in Delhi 🛒</h3>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="rounded-2xl bg-[#efe7dc] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">👘</div><p class="mt-2 text-lg text-slate-700">Sarees & Suits</p></div>
+            <div class="rounded-2xl bg-[#ece8d1] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">💎</div><p class="mt-2 text-lg text-slate-700">Jewelry</p></div>
+            <div class="rounded-2xl bg-[#dcebe2] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">🌿</div><p class="mt-2 text-lg text-slate-700">Spices</p></div>
+            <div class="rounded-2xl bg-[#dbe4ef] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">🎨</div><p class="mt-2 text-lg text-slate-700">Handicrafts</p></div>
+            <div class="rounded-2xl bg-[#e8e3ef] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">👜</div><p class="mt-2 text-lg text-slate-700">Leather Goods</p></div>
+            <div class="rounded-2xl bg-[#efe5ee] p-4 text-center transition-transform duration-300 hover:scale-[1.03]"><div class="text-4xl">📿</div><p class="mt-2 text-lg text-slate-700">Souvenirs</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="culture" class="py-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-medium">
+            <span>🎭</span>
+            <span>Cultural Heritage</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900 mt-5">Culture & <span class="text-orange-500">Festivals</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">Delhi celebrates India's rich cultural diversity through vibrant festivals, art, music, and traditions that bring the city alive throughout the year.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          <article class="bg-[#f2eedb] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]">
+            <div class="text-7xl">🪔</div>
+            <h3 class="mt-4 text-3xl sm:text-4xl text-slate-900">Diwali - Festival of Lights</h3>
+            <p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">The most spectacular festival! Delhi transforms into a sea of lights, fireworks, and celebrations. Markets overflow with sweets, decorations, and festive shopping.</p>
+            <p class="mt-4 text-orange-600 text-lg sm:text-xl">📅 October/November</p>
+            <ul class="mt-4 space-y-2 text-base sm:text-lg text-slate-600">
+              <li>✨ Homes decorated with diyas (oil lamps)</li>
+              <li>✨ Stunning firework displays</li>
+              <li>✨ Lakshmi Puja celebrations</li>
+            </ul>
+          </article>
+
+          <article class="bg-[#eee7f0] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]">
+            <div class="text-7xl">🎨</div>
+            <h3 class="mt-4 text-3xl sm:text-4xl text-slate-900">Holi - Festival of Colors</h3>
+            <p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">The most joyful celebration! People throw colored powders and water at each other. Streets become a canvas of vibrant colors and infectious energy.</p>
+            <p class="mt-4 text-pink-600 text-lg sm:text-xl">📅 March</p>
+            <ul class="mt-4 space-y-2 text-base sm:text-lg text-slate-600">
+              <li>🌈 Colorful powder (gulal) play</li>
+              <li>🌈 Traditional sweets like gujiya</li>
+              <li>🌈 Music and dancing celebrations</li>
+            </ul>
+          </article>
+
+          <article class="bg-[#deecec] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]">
+            <div class="text-7xl font-bold text-slate-900 leading-none">IN</div>
+            <h3 class="mt-4 text-3xl sm:text-4xl text-slate-900">Republic Day Parade</h3>
+            <p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">India's grand showcase of military might and cultural diversity! The spectacular parade at Rajpath features floats from all states, military displays, and cultural performances.</p>
+            <p class="mt-4 text-green-700 text-lg sm:text-xl">📅 26th January</p>
+            <ul class="mt-4 space-y-2 text-base sm:text-lg text-slate-600">
+              <li>🎖️ Military parade & displays</li>
+              <li>🎖️ State tableau showcases</li>
+              <li>🎖️ Air force flypast</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="mt-12 rounded-[28px] bg-gradient-to-r from-[#f1dfc8] to-[#e4d9f6] p-8 md:p-10 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+          <h3 class="text-3xl sm:text-4xl text-slate-900 text-center">More Celebrations in Delhi 🎉</h3>
+          <div class="mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🌙</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Eid</h4>
+              <p class="text-sm text-slate-600 mt-1">Jama Masjid celebrations & feasts</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🙏</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Durga Puja</h4>
+              <p class="text-sm text-slate-600 mt-1">Bengali community festivities</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🎪</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Dussehra</h4>
+              <p class="text-sm text-slate-600 mt-1">Ramlila & Ravana effigy burning</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🎄</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Christmas</h4>
+              <p class="text-sm text-slate-600 mt-1">Celebrations at Sacred Heart</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🪁</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Makar Sankranti</h4>
+              <p class="text-sm text-slate-600 mt-1">Kite flying festival</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🎤</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Qawwali Nights</h4>
+              <p class="text-sm text-slate-600 mt-1">Nizamuddin Dargah music</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">📚</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Lit Fests</h4>
+              <p class="text-sm text-slate-600 mt-1">World Book Fair & more</p>
+            </article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow">
+              <div class="text-4xl">🎵</div>
+              <h4 class="mt-2 text-2xl text-slate-900">Music Festivals</h4>
+              <p class="text-sm text-slate-600 mt-1">NH7 Weekender & more</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="max-w-4xl mx-auto text-center text-slate-600 text-xl leading-relaxed mt-12">
+          Delhi's festivals reflect India's incredible diversity — Hindus, Muslims, Sikhs, Christians, Buddhists, and people of all faiths celebrate together, making Delhi a true melting pot of cultures. 🤝
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3a2a24] text-orange-300 text-sm font-medium">
+            <span>📷</span>
+            <span>Visual Journey</span>
+          </span>
+          <h2 class="text-5xl sm:text-6xl font-bold text-white mt-5">Photo <span class="text-orange-400">Gallery</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-300 leading-relaxed">Explore Delhi through stunning visuals capturing its monuments, markets, festivals, and everyday magic.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C%20India%2C%20India%20Gate.jpg" alt="India Gate at Delhi" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20Delhi.jpg" alt="Red Fort architecture" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Qutub_Minar_%28Delhi%29.jpg" alt="Qutub Minar tower in Delhi" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20Temple%2CNew%20Delhi.jpg" alt="Lotus Temple exterior view" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Humayun%27s%20Tomb-Delhi.jpg" alt="Humayun's Tomb building and gardens" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swaminarayan%20Akshardham.jpg" alt="Akshardham temple structure" class="w-full h-56 object-cover rounded-xl" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section id="tips" class="py-20 bg-[#e9edf7]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#dce7ff] text-[#2456d6] text-sm font-medium">
+            <span>💡</span>
+            <span>Essential Information</span>
+          </span>
+          <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 mt-4">Travel <span class="text-orange-500">Tips</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-lg sm:text-xl leading-relaxed text-slate-700">
+            Make your Delhi trip smooth and memorable with these practical tips and recommendations from locals.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-slate-700">
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 text-white flex items-center justify-center text-2xl shadow-md">🌡️</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">Best Time to Visit</h3>
+            <p class="mt-2 text-base leading-relaxed">October to March offers the most pleasant weather. Avoid summer (May-Jul) when temperatures exceed 45°C.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span><span><span class="text-slate-500">Oct-Feb:</span> <span class="text-green-600 font-medium">Perfect</span></span></li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span><span><span class="text-slate-500">Mar-Apr:</span> <span class="text-amber-600 font-medium">Good</span></span></li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500"></span><span><span class="text-slate-500">May-Jul:</span> <span class="text-red-600 font-medium">Very Hot</span></span></li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span><span class="text-slate-500">Aug-Sep:</span> <span class="text-blue-600 font-medium">Monsoon</span></span></li>
+            </ul>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 text-white flex items-center justify-center text-2xl shadow-md">🚇</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">Getting Around</h3>
+            <p class="mt-2 text-base leading-relaxed">Delhi Metro is the fastest and most comfortable way to travel. It connects all major attractions.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Metro: Fast, AC, affordable (₹10-60)</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Auto-rickshaw: Negotiate fare first</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Uber/Ola: Convenient for door-to-door</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>E-rickshaw: Great for short distances</span></li>
+            </ul>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 text-white flex items-center justify-center text-2xl shadow-md">👟</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">What to Wear</h3>
+            <p class="mt-2 text-base leading-relaxed">Dress comfortably for lots of walking. Religious sites require modest clothing.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-start gap-2"><span>•</span><span>Comfortable walking shoes</span></li>
+              <li class="flex items-start gap-2"><span>•</span><span>Scarf for temples/mosques</span></li>
+              <li class="flex items-start gap-2"><span>•</span><span>Sunscreen and sunglasses</span></li>
+              <li class="flex items-start gap-2"><span>•</span><span>Carry a water bottle</span></li>
+            </ul>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 text-white flex items-center justify-center text-2xl shadow-md">🍽️</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">Food Tips</h3>
+            <p class="mt-2 text-base leading-relaxed">Delhi street food is excellent. Choose hygienic places with high customer turnover.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Eat at busy stalls</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Drink sealed bottled water</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Start with mild spice levels</span></li>
+              <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5">✓</span><span>Carry basic digestive medicine</span></li>
+            </ul>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 text-white flex items-center justify-center text-2xl shadow-md">🛡️</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">Safety Tips</h3>
+            <p class="mt-2 text-base leading-relaxed">Delhi is generally safe. Stay alert like in any large metro city.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-start gap-2"><span class="text-amber-600 mt-0.5">•</span><span>Keep valuables secure</span></li>
+              <li class="flex items-start gap-2"><span class="text-amber-600 mt-0.5">•</span><span>Use official taxis/apps</span></li>
+              <li class="flex items-start gap-2"><span class="text-amber-600 mt-0.5">•</span><span>Avoid isolated areas late night</span></li>
+              <li class="flex items-start gap-2"><span class="text-amber-600 mt-0.5">•</span><span>Keep emergency numbers handy</span></li>
+            </ul>
+          </article>
+
+          <article class="bg-[#f7f7f8] rounded-3xl p-6 shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-400 to-purple-500 text-white flex items-center justify-center text-2xl shadow-md">💰</div>
+            <h3 class="mt-4 text-3xl font-semibold text-slate-900">Budget Planning</h3>
+            <p class="mt-2 text-base leading-relaxed">Delhi fits every budget, from backpacker travel to premium experiences.</p>
+            <ul class="mt-4 space-y-1.5 text-sm sm:text-base">
+              <li class="flex items-start gap-2"><span class="text-violet-600 mt-0.5">•</span><span>Budget: ₹2,000-3,000/day</span></li>
+              <li class="flex items-start gap-2"><span class="text-violet-600 mt-0.5">•</span><span>Mid-range: ₹5,000-8,000/day</span></li>
+              <li class="flex items-start gap-2"><span class="text-violet-600 mt-0.5">•</span><span>Luxury: ₹15,000+/day</span></li>
+              <li class="flex items-start gap-2"><span class="text-violet-600 mt-0.5">•</span><span>Bargain in local markets</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Emergency Numbers" class="pb-20 bg-[#e9edf7]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-[28px] bg-gradient-to-r from-[#f4434f] to-[#ff6f0b] p-8 md:p-10 shadow-[0_10px_26px_rgba(15,23,42,0.12)]">
+          <h3 class="text-white text-3xl sm:text-4xl font-semibold flex items-center gap-3 mb-7">
+            <span class="inline-flex w-7 h-7 rounded-md bg-white/20 items-center justify-center text-sm">SOS</span>
+            <span>Emergency Numbers</span>
+          </h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="rounded-2xl bg-white/18 text-white p-5 text-center">
+              <div class="text-3xl mb-2">📞</div>
+              <p class="text-3xl font-bold leading-tight">100</p>
+              <p class="text-lg opacity-95">Police</p>
+            </div>
+            <div class="rounded-2xl bg-white/18 text-white p-5 text-center">
+              <div class="text-3xl mb-2">🚑</div>
+              <p class="text-3xl font-bold leading-tight">102</p>
+              <p class="text-lg opacity-95">Ambulance</p>
+            </div>
+            <div class="rounded-2xl bg-white/18 text-white p-5 text-center">
+              <div class="text-3xl mb-2">🚒</div>
+              <p class="text-3xl font-bold leading-tight">101</p>
+              <p class="text-lg opacity-95">Fire</p>
+            </div>
+            <div class="rounded-2xl bg-white/18 text-white p-5 text-center">
+              <div class="text-3xl mb-2">👮</div>
+              <p class="text-3xl font-bold leading-tight">1091</p>
+              <p class="text-lg opacity-95">Women Helpline</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-20 bg-[#f3f4f6] relative overflow-hidden">
+      <div class="pointer-events-none absolute -top-20 -left-16 w-72 h-72 rounded-full bg-orange-200/35 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-20 -right-16 w-80 h-80 rounded-full bg-rose-200/35 blur-3xl"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-12 reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-green-800 text-sm font-medium">
+            <span>&#128231;</span><span>Get in Touch</span>
+          </span>
+          <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 mt-4">Contact <span class="text-orange-500">Us</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-lg sm:text-xl text-slate-700 leading-relaxed">Ready to explore Delhi? We'd love to help you plan your perfect trip. Reach out to us!</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="contact-panel reveal-on-scroll bg-[#efe8e2] rounded-3xl p-8 lg:p-9 shadow-[0_12px_28px_rgba(15,23,42,0.10)] h-full flex flex-col">
+            <h3 class="text-3xl sm:text-4xl text-slate-900 mb-6">Send us a Message</h3>
+            <form id="contactForm" class="flex flex-col flex-1">
+              <div class="space-y-5 flex-1">
+                <div>
+                  <label for="name" class="block text-lg text-slate-800 mb-2">Your Name</label>
+                  <input id="name" required class="w-full px-5 py-4 rounded-2xl border border-slate-300 bg-[#f7f7f8] text-base focus:outline-none focus:ring-2 focus:ring-orange-300" placeholder="Enter your name">
+                </div>
+                <div>
+                  <label for="email" class="block text-lg text-slate-800 mb-2">Email Address</label>
+                  <input id="email" type="email" required class="w-full px-5 py-4 rounded-2xl border border-slate-300 bg-[#f7f7f8] text-base focus:outline-none focus:ring-2 focus:ring-orange-300" placeholder="your@email.com">
+                </div>
+                <div>
+                  <label for="subject" class="block text-lg text-slate-800 mb-2">Subject</label>
+                  <select id="subject" class="w-full px-5 py-4 rounded-2xl border border-slate-300 bg-[#f7f7f8] text-base focus:outline-none focus:ring-2 focus:ring-orange-300">
+                    <option>General Inquiry</option>
+                    <option>Trip Planning Help</option>
+                    <option>Feedback</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="message" class="block text-lg text-slate-800 mb-2">Your Message</label>
+                  <textarea id="message" required rows="5" class="w-full px-5 py-4 rounded-2xl border border-slate-300 bg-[#f7f7f8] text-base resize-none focus:outline-none focus:ring-2 focus:ring-orange-300" placeholder="Tell us about your travel plans..."></textarea>
+                </div>
+              </div>
+              <div class="pt-5 mt-auto">
+                <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-xl font-semibold shadow hover:opacity-95">Send Message &#9993;&#65039;</button>
+                <p id="formStatus" class="hidden text-green-700 bg-green-100 rounded-xl p-3 text-center mt-3">Thanks! Your message has been captured.</p>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-panel reveal-on-scroll bg-[#f7f7f8] rounded-3xl p-8 lg:p-9 shadow-[0_12px_28px_rgba(15,23,42,0.10)] h-full flex flex-col">
+            <h3 class="text-3xl sm:text-4xl text-slate-900 mb-6">Contact Information</h3>
+            <div class="space-y-6 text-base sm:text-lg">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-xl">&#128231;</div>
+                <div><p class="font-semibold text-slate-900">Email</p><p class="text-slate-700">hello@discoverdelhi.com</p></div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-xl">&#128241;</div>
+                <div><p class="font-semibold text-slate-900">Phone</p><p class="text-slate-700">+91 99999 99999</p></div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-xl">&#128205;</div>
+                <div><p class="font-semibold text-slate-900">Location</p><p class="text-slate-700">New Delhi, India</p></div>
+              </div>
+            </div>
+
+            <div class="mt-8 p-6 rounded-2xl text-white bg-gradient-to-r from-orange-500 to-red-500 shadow-[0_12px_24px_rgba(249,115,22,0.30)]">
+              <div class="text-3xl font-bold leading-none">IN</div>
+              <h4 class="text-2xl sm:text-3xl mt-2">Start Your Delhi Adventure!</h4>
+              <p class="text-base sm:text-lg mt-2 opacity-95">We can't wait to help you explore this incredible city.</p>
+            </div>
+
+            <div class="mt-auto pt-6">
+              <h3 class="text-3xl sm:text-4xl text-slate-900">Follow Our Journey</h3>
+              <p class="text-slate-700 text-lg sm:text-xl mt-2">Stay connected for travel tips, stunning photos, and Delhi updates!</p>
+              <div class="mt-5 flex gap-4">
+                <a href="#" aria-label="Instagram" class="contact-social w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 text-white flex items-center justify-center">&#128247;</a>
+                <a href="#" aria-label="Facebook" class="contact-social w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center">&#128216;</a>
+                <a href="#" aria-label="X" class="contact-social w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-500 text-white flex items-center justify-center">&#128038;</a>
+                <a href="#" aria-label="YouTube" class="contact-social w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center">&#9654;&#65039;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <footer class="bg-[#08152f] text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 text-white text-3xl">
+            <span>🕌</span>
+            <span class="text-4xl font-semibold">Discover Delhi</span>
+          </div>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">Your complete guide to exploring India's magnificent capital. From ancient monuments to modern marvels, we help you experience the best of Delhi.</p>
+          <div class="mt-6 flex gap-4 text-2xl">
+            <span>📷</span><span>📘</span><span>🐦</span><span>▶️</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">Quick Links</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="#home">Home</a>
+            <a class="block hover:text-white" href="#places">Famous Places</a>
+            <a class="block hover:text-white" href="#food">Delhi Food</a>
+            <a class="block hover:text-white" href="#itinerary">Itinerary</a>
+            <a class="block hover:text-white" href="#shopping">Shopping</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">More Info</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="#culture">Culture & Festivals</a>
+            <a class="block hover:text-white" href="#gallery">Photo Gallery</a>
+            <a class="block hover:text-white" href="#tips">Travel Tips</a>
+            <a class="block hover:text-white" href="#contact">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-lg text-slate-400">© 2024 Discover Delhi. Made with 💗 for travelers exploring India's capital.</p>
+        <p class="mt-2 text-base text-slate-500">IN Incredible India • Atithi Devo Bhava (Guest is God)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    menuBtn.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
+    mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileNav.classList.add("hidden")));
+
+    const links = Array.from(document.querySelectorAll(".nav-link"));
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + entry.target.id));
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+    sections.forEach(section => observer.observe(section));
+
+    const revealItems = Array.from(document.querySelectorAll(".reveal-on-scroll"));
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in-view");
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+      revealObserver.observe(item);
+    });
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      formStatus.classList.remove("hidden");
+      contactForm.reset();
+      setTimeout(() => formStatus.classList.add("hidden"), 4000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
