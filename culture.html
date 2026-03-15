@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience Delhi's festivals, celebrations, cultural heritage, music, and public rituals across the year.">
+  <title>Discover Delhi | Culture</title>
+  <link rel="icon" type="image/svg+xml" href="assets/delhi-icon.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body data-page="culture" class="h-full text-slate-800">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="brand-wordmark inline-flex items-center gap-2.5 font-semibold text-3xl leading-none tracking-tight">
+        <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-8 h-8" loading="eager" decoding="async">
+        <span>Discover Delhi</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden px-3 py-2 rounded-md border border-gray-200" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div id="desktopNav" class="hidden lg:flex items-center gap-5 text-sm font-medium">
+        <a class="nav-link" data-nav="home" href="index.html">Home</a>
+        <a class="nav-link" data-nav="places" href="places.html">Places</a>
+        <a class="nav-link" data-nav="food" href="food.html">Food</a>
+        <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" data-nav="shopping" href="shopping.html">Shopping</a>
+        <a class="nav-link" data-nav="culture" href="culture.html">Culture</a>
+        <a class="nav-link" data-nav="gallery" href="gallery.html">Gallery</a>
+        <a class="nav-link" data-nav="tips" href="tips.html">Tips</a>
+        <a class="nav-cta px-4 py-2 rounded-full" data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+        <a data-nav="home" href="index.html">Home</a>
+        <a data-nav="places" href="places.html">Places</a>
+        <a data-nav="food" href="food.html">Food</a>
+        <a data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a data-nav="shopping" href="shopping.html">Shopping</a>
+        <a data-nav="culture" href="culture.html">Culture</a>
+        <a data-nav="gallery" href="gallery.html">Gallery</a>
+        <a data-nav="tips" href="tips.html">Tips</a>
+        <a data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section class="page-hero py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+        <div class="reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100 text-pink-700 text-sm font-medium">
+            <span>&#127917;</span>
+            <span>Cultural Heritage</span>
+          </span>
+          <h1 class="mt-5 text-5xl sm:text-6xl text-slate-900">Delhi celebrates in layers, not seasons alone</h1>
+          <p class="mt-5 text-lg sm:text-xl text-slate-600 leading-relaxed">The city blends civic ceremony, religious festivals, literary events, music nights, and neighborhood traditions into a cultural calendar that rarely goes quiet.</p>
+        </div>
+        <div class="reveal-on-scroll rounded-[2rem] bg-white p-4 shadow-[0_18px_38px_rgba(15,23,42,0.12)]">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-[#fff1f2] p-6"><p class="text-sm uppercase tracking-[0.2em] text-pink-600 font-semibold">High Energy</p><p class="mt-3 text-2xl text-slate-900">Holi and Diwali</p></div>
+            <div class="rounded-2xl bg-[#ecfeff] p-6"><p class="text-sm uppercase tracking-[0.2em] text-cyan-700 font-semibold">Civic Ritual</p><p class="mt-3 text-2xl text-slate-900">Republic Day Parade</p></div>
+            <div class="col-span-2 rounded-2xl bg-[#0f172a] p-6 text-slate-200"><p class="text-sm uppercase tracking-[0.2em] text-orange-300 font-semibold">What makes Delhi distinct</p><p class="mt-3 text-xl">Different communities celebrate in public, and the city lets those celebrations overlap without flattening them into one story.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <article class="reveal-on-scroll bg-[#f2eedb] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]"><div class="text-7xl">&#127876;</div><h2 class="mt-4 text-3xl sm:text-4xl text-slate-900">Diwali</h2><p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">Delhi transforms into a sea of lights, sweets, decorations, and intense festive shopping.</p><p class="mt-4 text-orange-600 text-lg sm:text-xl">October / November</p></article>
+          <article class="reveal-on-scroll bg-[#eee7f0] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]"><div class="text-7xl">&#127752;</div><h2 class="mt-4 text-3xl sm:text-4xl text-slate-900">Holi</h2><p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">Color, music, crowds, and the joyful unpredictability of a festival built around public play.</p><p class="mt-4 text-pink-600 text-lg sm:text-xl">March</p></article>
+          <article class="reveal-on-scroll bg-[#deecec] rounded-3xl p-8 shadow-[0_10px_24px_rgba(15,23,42,0.1)]"><div class="text-7xl font-bold text-slate-900 leading-none">IN</div><h2 class="mt-4 text-3xl sm:text-4xl text-slate-900">Republic Day Parade</h2><p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">A grand state display of military procession, cultural tableaux, and national choreography.</p><p class="mt-4 text-green-700 text-lg sm:text-xl">26 January</p></article>
+        </div>
+
+        <div class="mt-12 rounded-[28px] bg-gradient-to-r from-[#f1dfc8] to-[#e4d9f6] p-8 md:p-10 shadow-[0_10px_24px_rgba(15,23,42,0.08)] reveal-on-scroll">
+          <h2 class="text-3xl sm:text-4xl text-slate-900 text-center">More celebrations in Delhi</h2>
+          <div class="mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127769;</div><h3 class="mt-2 text-2xl text-slate-900">Eid</h3><p class="text-sm text-slate-600 mt-1">Jama Masjid celebrations and feasts</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#128591;</div><h3 class="mt-2 text-2xl text-slate-900">Durga Puja</h3><p class="text-sm text-slate-600 mt-1">Bengali community festivities</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127915;</div><h3 class="mt-2 text-2xl text-slate-900">Dussehra</h3><p class="text-sm text-slate-600 mt-1">Ramlila and Ravana effigy burning</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127876;</div><h3 class="mt-2 text-2xl text-slate-900">Christmas</h3><p class="text-sm text-slate-600 mt-1">Celebrations at Sacred Heart and beyond</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127881;</div><h3 class="mt-2 text-2xl text-slate-900">Makar Sankranti</h3><p class="text-sm text-slate-600 mt-1">Kite flying festival</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127908;</div><h3 class="mt-2 text-2xl text-slate-900">Qawwali Nights</h3><p class="text-sm text-slate-600 mt-1">Nizamuddin Dargah music gatherings</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#128214;</div><h3 class="mt-2 text-2xl text-slate-900">Lit Fests</h3><p class="text-sm text-slate-600 mt-1">Book fairs and literary events</p></article>
+            <article class="bg-[#f7f7f8] rounded-2xl p-5 text-center shadow"><div class="text-4xl">&#127925;</div><h3 class="mt-2 text-2xl text-slate-900">Music Festivals</h3><p class="text-sm text-slate-600 mt-1">Concerts, indie stages, and seasonal lineups</p></article>
+          </div>
+        </div>
+
+        <p class="max-w-4xl mx-auto text-center text-slate-600 text-xl leading-relaxed mt-12 reveal-on-scroll">Delhi's festivals reflect India's incredible diversity. Hindus, Muslims, Sikhs, Christians, Buddhists, and people of all faiths celebrate in the same city, often within the same week.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#08152f] text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 text-white text-3xl">
+            <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-10 h-10" loading="lazy" decoding="async">
+            <span class="text-4xl font-semibold">Discover Delhi</span>
+          </div>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">Your complete guide to exploring India's magnificent capital. From ancient monuments to modern marvels, this multi-page experience helps you find the part of Delhi you want fastest.</p>
+          <div class="mt-6 flex gap-3 text-xl">
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128247;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128216;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128038;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#9654;</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">Quick Links</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="index.html">Home</a>
+            <a class="block hover:text-white" href="places.html">Places</a>
+            <a class="block hover:text-white" href="food.html">Food</a>
+            <a class="block hover:text-white" href="itinerary.html">Itinerary</a>
+            <a class="block hover:text-white" href="shopping.html">Shopping</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">More Info</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="culture.html">Culture</a>
+            <a class="block hover:text-white" href="gallery.html">Gallery</a>
+            <a class="block hover:text-white" href="tips.html">Travel Tips</a>
+            <a class="block hover:text-white" href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-lg text-slate-400">&copy; 2026 Discover Delhi. Crafted for travelers exploring India's capital.</p>
+        <p class="mt-2 text-base text-slate-500">Incredible India | Atithi Devo Bhava (Guest is God)</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

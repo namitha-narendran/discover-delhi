@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Delhi's famous places, from Red Fort and Qutub Minar to India Gate, Akshardham, Lotus Temple, and Humayun's Tomb.">
+  <title>Discover Delhi | Places</title>
+  <link rel="icon" type="image/svg+xml" href="assets/delhi-icon.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body data-page="places" class="h-full text-slate-800">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="brand-wordmark inline-flex items-center gap-2.5 font-semibold text-3xl leading-none tracking-tight">
+        <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-8 h-8" loading="eager" decoding="async">
+        <span>Discover Delhi</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden px-3 py-2 rounded-md border border-gray-200" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div id="desktopNav" class="hidden lg:flex items-center gap-5 text-sm font-medium">
+        <a class="nav-link" data-nav="home" href="index.html">Home</a>
+        <a class="nav-link" data-nav="places" href="places.html">Places</a>
+        <a class="nav-link" data-nav="food" href="food.html">Food</a>
+        <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" data-nav="shopping" href="shopping.html">Shopping</a>
+        <a class="nav-link" data-nav="culture" href="culture.html">Culture</a>
+        <a class="nav-link" data-nav="gallery" href="gallery.html">Gallery</a>
+        <a class="nav-link" data-nav="tips" href="tips.html">Tips</a>
+        <a class="nav-cta px-4 py-2 rounded-full" data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+        <a data-nav="home" href="index.html">Home</a>
+        <a data-nav="places" href="places.html">Places</a>
+        <a data-nav="food" href="food.html">Food</a>
+        <a data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a data-nav="shopping" href="shopping.html">Shopping</a>
+        <a data-nav="culture" href="culture.html">Culture</a>
+        <a data-nav="gallery" href="gallery.html">Gallery</a>
+        <a data-nav="tips" href="tips.html">Tips</a>
+        <a data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section class="page-hero py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+        <div class="reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 text-orange-700 text-sm font-medium">
+            <span>&#127963;&#65039;</span>
+            <span>Must Visit Attractions</span>
+          </span>
+          <h1 class="mt-5 text-5xl sm:text-6xl text-slate-900">Delhi's most iconic places, arranged for an actual trip</h1>
+          <p class="mt-5 text-lg sm:text-xl text-slate-600 leading-relaxed">This page gives the landmark layer of Delhi: Mughal history, ceremonial avenues, modern temples, and the monuments that define the city in a first visit.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="itinerary.html" class="px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold shadow-lg shadow-orange-300/40">Build My Route</a>
+            <a href="gallery.html" class="px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow">See Gallery</a>
+          </div>
+        </div>
+        <div class="reveal-on-scroll rounded-[2rem] bg-white p-4 shadow-[0_18px_38px_rgba(15,23,42,0.12)]">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20Delhi.jpg" alt="Red Fort in Delhi" class="w-full h-56 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Qutub_Minar_%28Delhi%29.jpg" alt="Qutub Minar in Delhi" class="w-full h-56 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="sm:col-span-2 rounded-2xl bg-[#fff7ed] p-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-orange-600 font-semibold">Best Pairing</p>
+              <p class="mt-3 text-2xl text-slate-900">Central Delhi in the morning, heritage sites in the late afternoon, and India Gate after sunset.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal-on-scroll">
+          <h2 class="text-5xl sm:text-6xl font-bold text-slate-900">Famous <span class="text-orange-500">Places</span></h2>
+          <p class="max-w-3xl mx-auto mt-4 text-xl text-slate-600 leading-relaxed">Discover Delhi's iconic landmarks that narrate stories of emperors, freedom fighters, and architectural marvels spanning centuries.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20Delhi.jpg" alt="Red Fort in Old Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Red Fort (Lal Qila)</h3>
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">Built in 1639 by Mughal Emperor Shah Jahan, this massive red sandstone fort served as the main residence of the emperors for nearly 200 years. Every Independence Day, India's Prime Minister hoists the national flag here.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Old Delhi &nbsp;&nbsp;&nbsp; &#9200; 9:30 AM - 4:30 PM</p>
+            </div>
+          </article>
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Qutub_Minar_%28Delhi%29.jpg" alt="Qutub Minar full tower view in Mehrauli" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Qutub Minar</h3>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">Standing at 73 meters, this magnificent minaret is the world's tallest brick tower. Built in 1193 by Qutub-ud-din Aibak, its five distinct storeys feature intricate carvings and verses from the Quran.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Mehrauli &nbsp;&nbsp;&nbsp; &#9200; Sunrise - Sunset</p>
+            </div>
+          </article>
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20Temple%2CNew%20Delhi.jpg" alt="Lotus Temple in New Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Lotus Temple</h3>
+                <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-semibold">Modern Marvel</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This stunning Bahai House of Worship resembles a lotus flower with 27 free-standing marble petals. Completed in 1986, it welcomes people of all faiths for meditation and prayer in serene silence.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Nehru Place &nbsp;&nbsp;&nbsp; &#9200; 9:00 AM - 5:30 PM</p>
+            </div>
+          </article>
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Humayun%27s%20Tomb-Delhi.jpg" alt="Humayun's Tomb in Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Humayun's Tomb</h3>
+                <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold">UNESCO Site</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">The inspiration for the Taj Mahal, this stunning garden tomb was built in 1570 for Mughal Emperor Humayun. It introduced the Persian char-bagh (four-quartered garden) style to India's architectural landscape.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Nizamuddin East &nbsp;&nbsp;&nbsp; &#9200; Sunrise - Sunset</p>
+            </div>
+          </article>
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C%20India%2C%20India%20Gate.jpg" alt="India Gate war memorial" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">India Gate</h3>
+                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">War Memorial</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This 42-meter high arch commemorates 70,000 Indian soldiers who died in World War I. The Amar Jawan Jyoti burns beneath it, honoring India's unknown soldiers. Perfect for evening visits.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Rajpath &nbsp;&nbsp;&nbsp; &#9200; 24 Hours</p>
+            </div>
+          </article>
+          <article class="card reveal-on-scroll bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swaminarayan%20Akshardham.jpg" alt="Swaminarayan Akshardham Temple in Delhi" class="w-full h-52 object-cover" loading="lazy" decoding="async">
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-bold text-slate-900">Akshardham Temple</h3>
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">Spiritual</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">This architectural masterpiece features 20,000 hand-carved statues and intricate stone carvings. The complex includes beautiful gardens, a musical fountain show, and exhibitions on Indian culture and spirituality.</p>
+              <p class="mt-4 text-sm text-slate-500">&#128205; Noida Border &nbsp;&nbsp;&nbsp; &#9200; 9:30 AM - 6:30 PM</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#f8fafc]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="reveal-on-scroll rounded-3xl bg-[#fff7ed] p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <p class="text-sm uppercase tracking-[0.22em] text-orange-600 font-semibold">Best Timing</p>
+            <h3 class="mt-4 text-3xl text-slate-900">Start early, save your energy</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed">Outdoor monuments are strongest before the heat builds. Keep indoor museums, lunch, and Connaught Place for midday.</p>
+          </article>
+          <article class="reveal-on-scroll rounded-3xl bg-white p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <p class="text-sm uppercase tracking-[0.22em] text-orange-600 font-semibold">Good Pairings</p>
+            <h3 class="mt-4 text-3xl text-slate-900">Group by geography</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed">India Gate with Central Delhi. Red Fort with Chandni Chowk. Qutub Minar with Mehrauli or Hauz Khas. That keeps commute fatigue down.</p>
+          </article>
+          <article class="reveal-on-scroll rounded-3xl bg-[#fff1f2] p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <p class="text-sm uppercase tracking-[0.22em] text-orange-600 font-semibold">Planning Note</p>
+            <h3 class="mt-4 text-3xl text-slate-900">Use the metro whenever possible</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed">Delhi traffic can break an otherwise efficient day. Metro plus short rides for the last mile works best for most travelers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#08152f] text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 text-white text-3xl">
+            <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-10 h-10" loading="lazy" decoding="async">
+            <span class="text-4xl font-semibold">Discover Delhi</span>
+          </div>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">Your complete guide to exploring India's magnificent capital. From ancient monuments to modern marvels, this multi-page experience helps you find the part of Delhi you want fastest.</p>
+          <div class="mt-6 flex gap-3 text-xl">
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128247;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128216;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128038;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#9654;</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">Quick Links</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="index.html">Home</a>
+            <a class="block hover:text-white" href="places.html">Places</a>
+            <a class="block hover:text-white" href="food.html">Food</a>
+            <a class="block hover:text-white" href="itinerary.html">Itinerary</a>
+            <a class="block hover:text-white" href="shopping.html">Shopping</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">More Info</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="culture.html">Culture</a>
+            <a class="block hover:text-white" href="gallery.html">Gallery</a>
+            <a class="block hover:text-white" href="tips.html">Travel Tips</a>
+            <a class="block hover:text-white" href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-lg text-slate-400">&copy; 2026 Discover Delhi. Crafted for travelers exploring India's capital.</p>
+        <p class="mt-2 text-base text-slate-500">Incredible India | Atithi Devo Bhava (Guest is God)</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

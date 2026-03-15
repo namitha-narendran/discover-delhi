@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse a visual gallery of Delhi's monuments, public spaces, and architectural highlights.">
+  <title>Discover Delhi | Gallery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/delhi-icon.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body data-page="gallery" class="h-full text-slate-800">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="brand-wordmark inline-flex items-center gap-2.5 font-semibold text-3xl leading-none tracking-tight">
+        <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-8 h-8" loading="eager" decoding="async">
+        <span>Discover Delhi</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden px-3 py-2 rounded-md border border-gray-200" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div id="desktopNav" class="hidden lg:flex items-center gap-5 text-sm font-medium">
+        <a class="nav-link" data-nav="home" href="index.html">Home</a>
+        <a class="nav-link" data-nav="places" href="places.html">Places</a>
+        <a class="nav-link" data-nav="food" href="food.html">Food</a>
+        <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" data-nav="shopping" href="shopping.html">Shopping</a>
+        <a class="nav-link" data-nav="culture" href="culture.html">Culture</a>
+        <a class="nav-link" data-nav="gallery" href="gallery.html">Gallery</a>
+        <a class="nav-link" data-nav="tips" href="tips.html">Tips</a>
+        <a class="nav-cta px-4 py-2 rounded-full" data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+        <a data-nav="home" href="index.html">Home</a>
+        <a data-nav="places" href="places.html">Places</a>
+        <a data-nav="food" href="food.html">Food</a>
+        <a data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a data-nav="shopping" href="shopping.html">Shopping</a>
+        <a data-nav="culture" href="culture.html">Culture</a>
+        <a data-nav="gallery" href="gallery.html">Gallery</a>
+        <a data-nav="tips" href="tips.html">Tips</a>
+        <a data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16 bg-[#0f172a] text-white">
+    <section class="page-hero-dark py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-orange-300 text-sm font-medium">
+            <span>&#128247;</span>
+            <span>Visual Journey</span>
+          </span>
+          <h1 class="mt-5 text-5xl sm:text-6xl">Delhi through form, scale, and atmosphere</h1>
+          <p class="mt-5 text-lg sm:text-xl text-slate-300 leading-relaxed">This gallery leans into the visual language of the city: sandstone, marble, arches, symmetry, plazas, and ceremonial space.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-4">
+          <figure class="reveal-on-scroll md:col-span-2 rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delhi%2C%20India%2C%20India%20Gate.jpg" alt="India Gate at Delhi" class="w-full h-[420px] object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">India Gate at dusk, where public space and national memory meet.</figcaption>
+          </figure>
+          <figure class="reveal-on-scroll rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20Delhi.jpg" alt="Red Fort architecture" class="w-full h-[420px] object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">Red sandstone massing and imperial scale.</figcaption>
+          </figure>
+          <figure class="reveal-on-scroll rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Qutub_Minar_%28Delhi%29.jpg" alt="Qutub Minar tower in Delhi" class="w-full h-72 object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">Vertical drama in Mehrauli.</figcaption>
+          </figure>
+          <figure class="reveal-on-scroll rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20Temple%2CNew%20Delhi.jpg" alt="Lotus Temple exterior view" class="w-full h-72 object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">Modern geometry with spiritual calm.</figcaption>
+          </figure>
+          <figure class="reveal-on-scroll rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Humayun%27s%20Tomb-Delhi.jpg" alt="Humayun's Tomb building and gardens" class="w-full h-72 object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">Garden symmetry and Mughal proportion.</figcaption>
+          </figure>
+          <figure class="reveal-on-scroll md:col-span-3 rounded-[1.75rem] overflow-hidden bg-white/5">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swaminarayan%20Akshardham.jpg" alt="Akshardham temple structure" class="w-full h-[420px] object-cover" loading="lazy" decoding="async">
+            <figcaption class="p-5 text-slate-300">Akshardham's carved density, read best at scale.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#08152f] text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 text-white text-3xl">
+            <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-10 h-10" loading="lazy" decoding="async">
+            <span class="text-4xl font-semibold">Discover Delhi</span>
+          </div>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">Your complete guide to exploring India's magnificent capital. From ancient monuments to modern marvels, this multi-page experience helps you find the part of Delhi you want fastest.</p>
+          <div class="mt-6 flex gap-3 text-xl">
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128247;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128216;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128038;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#9654;</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">Quick Links</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="index.html">Home</a>
+            <a class="block hover:text-white" href="places.html">Places</a>
+            <a class="block hover:text-white" href="food.html">Food</a>
+            <a class="block hover:text-white" href="itinerary.html">Itinerary</a>
+            <a class="block hover:text-white" href="shopping.html">Shopping</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">More Info</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="culture.html">Culture</a>
+            <a class="block hover:text-white" href="gallery.html">Gallery</a>
+            <a class="block hover:text-white" href="tips.html">Travel Tips</a>
+            <a class="block hover:text-white" href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-lg text-slate-400">&copy; 2026 Discover Delhi. Crafted for travelers exploring India's capital.</p>
+        <p class="mt-2 text-base text-slate-500">Incredible India | Atithi Devo Bhava (Guest is God)</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

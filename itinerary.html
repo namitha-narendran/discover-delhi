@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Follow a polished two-day Delhi itinerary covering Central Delhi, Old Delhi, landmarks, food, and practical travel tips.">
+  <title>Discover Delhi | Itinerary</title>
+  <link rel="icon" type="image/svg+xml" href="assets/delhi-icon.svg">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body data-page="itinerary" class="h-full text-slate-800">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="brand-wordmark inline-flex items-center gap-2.5 font-semibold text-3xl leading-none tracking-tight">
+        <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-8 h-8" loading="eager" decoding="async">
+        <span>Discover Delhi</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden px-3 py-2 rounded-md border border-gray-200" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div id="desktopNav" class="hidden lg:flex items-center gap-5 text-sm font-medium">
+        <a class="nav-link" data-nav="home" href="index.html">Home</a>
+        <a class="nav-link" data-nav="places" href="places.html">Places</a>
+        <a class="nav-link" data-nav="food" href="food.html">Food</a>
+        <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" data-nav="shopping" href="shopping.html">Shopping</a>
+        <a class="nav-link" data-nav="culture" href="culture.html">Culture</a>
+        <a class="nav-link" data-nav="gallery" href="gallery.html">Gallery</a>
+        <a class="nav-link" data-nav="tips" href="tips.html">Tips</a>
+        <a class="nav-cta px-4 py-2 rounded-full" data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+        <a data-nav="home" href="index.html">Home</a>
+        <a data-nav="places" href="places.html">Places</a>
+        <a data-nav="food" href="food.html">Food</a>
+        <a data-nav="itinerary" href="itinerary.html">Itinerary</a>
+        <a data-nav="shopping" href="shopping.html">Shopping</a>
+        <a data-nav="culture" href="culture.html">Culture</a>
+        <a data-nav="gallery" href="gallery.html">Gallery</a>
+        <a data-nav="tips" href="tips.html">Tips</a>
+        <a data-nav="contact" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section class="page-hero py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+        <div class="reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+            <span>&#128197;</span>
+            <span>Plan Your Trip</span>
+          </span>
+          <h1 class="mt-5 text-5xl sm:text-6xl text-slate-900">A two-day Delhi plan that feels full, not frantic</h1>
+          <p class="mt-5 text-lg sm:text-xl text-slate-600 leading-relaxed">This route balances New Delhi's formal landmarks with Old Delhi's texture and appetite. It works best for first-time visitors who want a broad read on the city without losing whole hours in transit.</p>
+        </div>
+        <div class="reveal-on-scroll rounded-[2rem] bg-white p-4 shadow-[0_18px_38px_rgba(15,23,42,0.12)]">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-[#fff7ed] p-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-orange-600 font-semibold">Day 1</p>
+              <p class="mt-3 text-2xl text-slate-900">Central Delhi and modern avenues</p>
+            </div>
+            <div class="rounded-2xl bg-[#eff6ff] p-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-blue-600 font-semibold">Day 2</p>
+              <p class="mt-3 text-2xl text-slate-900">Old Delhi and heritage corridors</p>
+            </div>
+            <div class="col-span-2 rounded-2xl bg-[#0f172a] p-6 text-slate-200">
+              <p class="text-sm uppercase tracking-[0.2em] text-orange-300 font-semibold">Planning Principle</p>
+              <p class="mt-3 text-xl">Group places by zone. Delhi is generous with experiences but unforgiving about inefficient travel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <article class="reveal-on-scroll bg-[#f4efdf] rounded-3xl p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 text-white flex items-center justify-center text-4xl font-bold shadow-md">D1</div>
+              <div>
+                <h2 class="text-4xl text-slate-900">Day One</h2>
+                <p class="text-xl text-slate-600">New Delhi and Central Delhi</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-orange-600 font-semibold">8:00 AM - 10:00 AM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">India Gate and Rajpath</h3>
+                <p class="text-slate-600 text-lg mt-2">Start with a morning walk at India Gate. Watch the city wake up and enjoy the open lawns before traffic builds.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-orange-600 font-semibold">10:30 AM - 12:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Rashtrapati Bhavan</h3>
+                <p class="text-slate-600 text-lg mt-2">Visit the presidential zone and absorb the formal geometry that defines the capital's civic core.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-orange-600 font-semibold">12:30 PM - 2:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Lunch at Connaught Place</h3>
+                <p class="text-slate-600 text-lg mt-2">Explore the colonial circles, then reset with lunch at Wenger's or Saravana Bhavan.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-orange-600 font-semibold">3:00 PM - 5:30 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">National Museum</h3>
+                <p class="text-slate-600 text-lg mt-2">Use the hotter part of the day indoors and move through Indian history in one well-curated stop.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-orange-600 font-semibold">6:00 PM - 9:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Evening at India Gate</h3>
+                <p class="text-slate-600 text-lg mt-2">Return after dark for a completely different mood: lights, street snacks, and families out for the evening.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal-on-scroll bg-[#f3e8e2] rounded-3xl p-7 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 text-white flex items-center justify-center text-4xl font-bold shadow-md">D2</div>
+              <div>
+                <h2 class="text-4xl text-slate-900">Day Two</h2>
+                <p class="text-xl text-slate-600">Old Delhi and Heritage Sites</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-red-500 font-semibold">9:00 AM - 11:30 AM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Red Fort</h3>
+                <p class="text-slate-600 text-lg mt-2">Begin with the Mughal power center and give yourself enough time for the fort's layered interiors and museum spaces.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-red-500 font-semibold">12:00 PM - 2:30 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Chandni Chowk Food Walk</h3>
+                <p class="text-slate-600 text-lg mt-2">This is the most atmospheric meal block of the trip. Try paranthas, jalebis, lassi, and whatever catches your attention.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-red-500 font-semibold">3:00 PM - 4:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Jama Masjid</h3>
+                <p class="text-slate-600 text-lg mt-2">Visit India's largest mosque and, if open, climb the minaret for a wide view over Old Delhi.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-red-500 font-semibold">4:30 PM - 6:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Lotus Temple</h3>
+                <p class="text-slate-600 text-lg mt-2">End on a calmer note with a serene architectural contrast to the density of Old Delhi.</p>
+              </div>
+              <div class="bg-[#f7f7f8] rounded-2xl p-5 shadow">
+                <p class="text-red-500 font-semibold">7:00 PM - 9:00 PM</p>
+                <h3 class="text-2xl text-slate-900 mt-1">Shopping and Dinner</h3>
+                <p class="text-slate-600 text-lg mt-2">Finish at Dilli Haat or a neighborhood restaurant for a relaxed close with handicrafts and regional food.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-20 bg-[#f3f4f6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-[28px] bg-gradient-to-r from-[#ff6f0b] to-[#f43f5e] p-8 md:p-10 shadow-[0_10px_24px_rgba(15,23,42,0.1)] reveal-on-scroll">
+          <h2 class="text-white text-4xl sm:text-5xl">Pro Tips for Your Trip</h2>
+          <div class="mt-6 grid md:grid-cols-3 gap-4">
+            <article class="rounded-2xl bg-white/18 p-5 text-white">
+              <div class="text-3xl">&#128647;</div>
+              <p class="mt-3 text-2xl leading-relaxed">Use Delhi Metro. It connects all major attractions and is still the fastest way to travel across the city.</p>
+            </article>
+            <article class="rounded-2xl bg-white/18 p-5 text-white">
+              <div class="text-3xl">&#128095;</div>
+              <p class="mt-3 text-2xl leading-relaxed">Wear comfortable walking shoes. Old Delhi especially is best experienced on foot, lane by lane.</p>
+            </article>
+            <article class="rounded-2xl bg-white/18 p-5 text-white">
+              <div class="text-3xl">&#128241;</div>
+              <p class="mt-3 text-2xl leading-relaxed">Download maps offline. They are especially useful when you are weaving through dense market areas.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#08152f] text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 text-white text-3xl">
+            <img src="assets/delhi-icon.svg" alt="Discover Delhi icon" class="w-10 h-10" loading="lazy" decoding="async">
+            <span class="text-4xl font-semibold">Discover Delhi</span>
+          </div>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">Your complete guide to exploring India's magnificent capital. From ancient monuments to modern marvels, this multi-page experience helps you find the part of Delhi you want fastest.</p>
+          <div class="mt-6 flex gap-3 text-xl">
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128247;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128216;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#128038;</span>
+            <span class="inline-flex w-10 h-10 rounded-xl bg-white/10 items-center justify-center">&#9654;</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">Quick Links</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="index.html">Home</a>
+            <a class="block hover:text-white" href="places.html">Places</a>
+            <a class="block hover:text-white" href="food.html">Food</a>
+            <a class="block hover:text-white" href="itinerary.html">Itinerary</a>
+            <a class="block hover:text-white" href="shopping.html">Shopping</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-orange-400 text-2xl mb-4">More Info</h4>
+          <nav class="space-y-2 text-lg">
+            <a class="block hover:text-white" href="culture.html">Culture</a>
+            <a class="block hover:text-white" href="gallery.html">Gallery</a>
+            <a class="block hover:text-white" href="tips.html">Travel Tips</a>
+            <a class="block hover:text-white" href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-lg text-slate-400">&copy; 2026 Discover Delhi. Crafted for travelers exploring India's capital.</p>
+        <p class="mt-2 text-base text-slate-500">Incredible India | Atithi Devo Bhava (Guest is God)</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
